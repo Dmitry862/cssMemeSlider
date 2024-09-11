@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    background-color: black;
+
+}
