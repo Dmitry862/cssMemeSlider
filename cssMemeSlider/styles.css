@@ -151,6 +151,10 @@ input {
     transition: 1s;
 }
 
+.button:active {
+    transform: scale(2);
+}
+
 
 
 @media (max-width:768px) {
