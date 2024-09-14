@@ -11,19 +11,20 @@
 
 
 body {
-    position: relative;
+
     background-color: bisque;
     font-size: 1.2em;
 
 }
 
 .container {
-    margin-top: 10em;
+
     display: flex;
     flex-direction: column;
-    max-width: 89vh;
+    max-width: 53rem;
     padding: 0 1.25em;
-    margin: 0 auto;
+    margin: 10em auto;
+    width: 100%;
 }
 
 .slides {
@@ -32,22 +33,23 @@ body {
     overflow: hidden;
 }
 
-.bar {
-    width: 2em;
-    height: 0.5em;
-    margin: 0.5em;
-    border-radius: 1em;
-    background-color: rgb(98, 41, 204);
+.button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.15em solid black;
     cursor: pointer;
-
+    margin-left: 0.5rem;
 }
 
 .nav {
     display: flex;
     cursor: pointer;
-    opacity: 0.6;
-    justify-content: end;
+    width: 7rem;
+    padding: 0.25rem;
+
     margin: 0 0;
+
 }
 
 input {
@@ -58,7 +60,7 @@ input {
 .slide {
     width: 100%;
     height: auto;
-    transition: all .6s ease;
+    transition: all 2s ease;
 }
 
 #r1:checked~.slides .s1 {
@@ -68,15 +70,20 @@ input {
 
 #r2:checked~.slides .s1 {
     margin-left: -100%;
+
+
 }
 
 #r3:checked~.slides .s1 {
     margin-left: -200%;
+
 }
+
 
 #r4:checked~.slides .s1 {
     margin-left: -300%;
 }
+
 
 
 #r1:checked~.control .text-box .s1 {
@@ -97,9 +104,6 @@ input {
 }
 
 
-
-
-
 .text-box {
     overflow: hidden;
     width: 100%;
@@ -118,14 +122,27 @@ input {
     justify-content: space-between;
 }
 
+#r1:checked~.control .nav label:nth-of-type(1) .button,
+#r2:checked~.control .nav label:nth-of-type(2) .button,
+#r3:checked~.control .nav label:nth-of-type(3) .button,
+#r4:checked~.control .nav label:nth-of-type(4) .button {
+    background: rgb(65, 34, 245);
+}
 
-@media (max-width:700px) {
+.button:hover {
+    background-color: rgb(253, 16, 174);
+    transition: 1s;
+}
+
+
+@media (max-width:768px) {
     .control {
         flex-direction: column-reverse;
         justify-content: center;
     }
 
     .nav {
-        justify-content: center;
+        justify-content: space-between;
+        margin: 0 auto;
     }
 }
