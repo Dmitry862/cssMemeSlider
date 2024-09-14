@@ -42,6 +42,10 @@ body {
     margin-left: 0.5rem;
 }
 
+label span {
+    display: block;
+}
+
 .nav {
     display: flex;
     cursor: pointer;
