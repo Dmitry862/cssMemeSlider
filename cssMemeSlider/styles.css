@@ -3,8 +3,65 @@
     margin: 0 auto;
 }
 
+
+
 body {
     position: relative;
-    background-color: black;
+    background-color: bisque;
 
+
+}
+
+.middle {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider {
+    width: 50em;
+    display: flex;
+    overflow: hidden;
+}
+
+.bar {
+    width: 2em;
+    height: 0.5em;
+    margin: 0.5em;
+    border-radius: 1em;
+    background-color: black;
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    cursor: pointer;
+    opacity: 0.6;
+    justify-content: center;
+}
+
+input {
+    visibility: hidden;
+    position: absolute;
+}
+
+.slide {
+
+    transition: all .6s ease;
+}
+
+#r1:checked~.s1 {
+    margin-left: 0;
+}
+
+#r2:checked~.s1 {
+    margin-left: -100%;
+}
+
+#r3:checked~.s1 {
+    margin-left: -200%;
+}
+
+#r4:checked~.s1 {
+    margin-left: -300%;
 }
