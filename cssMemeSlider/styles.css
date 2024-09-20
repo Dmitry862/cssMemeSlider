@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+@font-face {
+    font-family: Arial;
+    src: url(../cssMemeSlider/assets/font/arial-regular.ttf);
+
+}
+
+@font-face {
+    font-family: 'Times New Roman';
+    src: url(../cssMemeSlider/assets/font/Times\ New\ Roman.ttf);
+}
+
+
+body {
+
+    background-color: bisque;
+    font-size: 1.2em;
+}
+
+.title {
+    display: grid;
+    justify-items: center;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    font-style: italic;
+    color: blue;
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    max-width: 53rem;
+    padding: 0 1.25em;
+    margin: 6em auto;
+    width: 100%;
+}
+
+.slides {
+    /* max-width: 50em; */
+    display: flex;
+    overflow: hidden;
+}
+
+.button {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 0.15em solid black;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+label span {
+    display: block;
+}
+
+.nav {
+    display: flex;
+    cursor: pointer;
+    width: 7rem;
+    padding: 0.25rem;
+
+    margin: 0 0;
+
+}
+
+input {
+    visibility: hidden;
+
+}
+
+.bar {
+    height: 2.25rem;
+    width: 2.25rem;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.bar:hover .button {
+    background-color: rgb(253, 16, 174);
+    transition: all .4s ease;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+    transition: all 2s ease;
+}
+
+#r1:checked~.slides .s1 {
+    margin-left: 0;
+
+}
+
+#r2:checked~.slides .s1 {
+    margin-left: -100%;
+
+
+}
+
+#r3:checked~.slides .s1 {
+    margin-left: -200%;
+
+}
+
+
+#r4:checked~.slides .s1 {
+    margin-left: -300%;
+}
+
+
+
+#r1:checked~.control .text-box .s1 {
+    margin-left: 0;
+
+}
+
+#r2:checked~.control .text-box .s1 {
+    margin-left: -100%;
+}
+
+#r3:checked~.control .text-box .s1 {
+    margin-left: -200%;
+}
+
+#r4:checked~.control .text-box .s1 {
+    margin-left: -300%;
+}
+
+
+.text-box {
+    overflow: hidden;
+    width: 100%;
+
+    display: flex;
+}
+
+.text {
+    font-size: 1.5em;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    transition: all 2s ease;
+}
+
+.control {
+    display: flex;
+    justify-content: space-between;
+}
+
+#r1:checked~.control .nav label:nth-of-type(1) .button,
+#r2:checked~.control .nav label:nth-of-type(2) .button,
+#r3:checked~.control .nav label:nth-of-type(3) .button,
+#r4:checked~.control .nav label:nth-of-type(4) .button {
+    background: rgb(65, 34, 245);
+}
+
+.button:hover {
+    background-color: rgb(253, 16, 174);
+    transition: 1s;
+}
+
+.button:active {
+    transform: scale(2);
+}
+
+
+
+@media (max-width:769px) {
+    .control {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .nav {
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+}
